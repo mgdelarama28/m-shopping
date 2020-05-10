@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
-| Web Routes
+| Admin Routes
 |--------------------------------------------------------------------------
 |
 | Here is where you can register web routes for your application. These
@@ -13,14 +13,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('admin.dashboard');
+Route::name('admin.')->prefix('admin')->namespace('Admin')->group(function() {
+    Route::middleware('guest:admin')->group(function() {
+        Route::namespace('Auth')->group(function() {
+            Route::get('/login', 'LoginController@showLoginForm')->name('login');
+            Route::post('/login', 'LoginController@login')->name('login');
+        });
+    });
+    
+    Route::middleware('auth:admin')->group(function() {
+        Route::namespace('Auth')->group(function() {
+            Route::post('/logout', 'LoginController@logout')->name('logout');
+        });
+        
+        Route::get('/', 'DashboardController@index')->name('dashboard');
+    });
 });
-
-Route::get('/login', function() {
-    return view('admin.auth.login');
-});
-
-// Auth::routes();
-
-// Route::get('/home', 'HomeController@index')->name('home');
