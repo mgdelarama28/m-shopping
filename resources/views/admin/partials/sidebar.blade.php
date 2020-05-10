@@ -1,8 +1,8 @@
 <aside class="menu-sidebar2">
     <div class="logo justify-content-center">
-        <h2 class="">
-            <a href="#" class="text-white">
-                Dev Admin
+        <h2>
+            <a href="{{ route('admin.dashboard') }}" class="text-white">
+                {{ config('app.name') }}
             </a>
         </h2>
     </div>
@@ -10,10 +10,19 @@
     <div class="menu-sidebar2__content js-scrollbar1">
         <div class="account2">
             <div class="image img-cir img-120">
-                <img src="{{ asset('images/no-image.png') }}" alt="" />
+                <img src="{{ $admin->renderAvatar() }}" alt="" />
             </div>
-            <h4 class="name">john doe</h4>
-            <a href="#">Sign out</a>
+            <h4 class="name">{{ $admin->renderFullName() }}</h4>
+
+            <a href="{{ route('admin.logout') }}"
+                onclick="event.preventDefault();
+                document.getElementById('logout-form').submit();">
+                Sign out
+            </a>
+
+            <form id="logout-form" action="{{ route('admin.logout') }}" method="POST" style="display: none;">
+                @csrf
+            </form>
         </div>
 
         <nav class="navbar-sidebar2">
