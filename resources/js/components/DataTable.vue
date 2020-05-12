@@ -50,7 +50,8 @@
                 </thead>
 
                 <tbody>
-                    <tr class="tr-shadow">
+                    <slot name="body"></slot>
+                    <!-- <tr class="tr-shadow">
                         <td>1</td>
 
                         <td>
@@ -84,7 +85,7 @@
                         </td>
                     </tr>
 
-                    <tr class="spacer"></tr>
+                    <tr class="spacer"></tr> -->
                 </tbody>
             </table>
         </div>

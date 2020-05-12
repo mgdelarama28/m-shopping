@@ -2001,6 +2001,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -37715,31 +37716,7 @@ var render = function() {
           )
         ]),
         _vm._v(" "),
-        _c("tbody", [
-          _c("tr", { staticClass: "tr-shadow" }, [
-            _c("td", [_vm._v("1")]),
-            _vm._v(" "),
-            _c("td", [_c("span", [_vm._v(_vm._s(_vm.admins[0].last_name))])]),
-            _vm._v(" "),
-            _c("td", [_vm._v(_vm._s(_vm.admins[0].first_name))]),
-            _vm._v(" "),
-            _c("td", [_vm._v(_vm._s(_vm.admins[0].email))]),
-            _vm._v(" "),
-            _c("td", [
-              _vm._v(
-                "\n                        " +
-                  _vm._s(_vm.admins[0].role) +
-                  "\n                    "
-              )
-            ]),
-            _vm._v(" "),
-            _c("td", [_vm._v(_vm._s(_vm.admins[0].email_verified_at))]),
-            _vm._v(" "),
-            _vm._m(1)
-          ]),
-          _vm._v(" "),
-          _c("tr", { staticClass: "spacer" })
-        ])
+        _c("tbody", [_vm._t("body")], 2)
       ])
     ])
   ])
@@ -37819,53 +37796,6 @@ var staticRenderFns = [
             _vm._v(" "),
             _c("div", { staticClass: "dropDownSelect2" })
           ]
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("td", [
-      _c("div", { staticClass: "table-data-feature" }, [
-        _c(
-          "button",
-          {
-            staticClass: "item",
-            attrs: {
-              "data-toggle": "tooltip",
-              "data-placement": "top",
-              title: "Send"
-            }
-          },
-          [_c("i", { staticClass: "zmdi zmdi-mail-send" })]
-        ),
-        _vm._v(" "),
-        _c(
-          "button",
-          {
-            staticClass: "item",
-            attrs: {
-              "data-toggle": "tooltip",
-              "data-placement": "top",
-              title: "Edit"
-            }
-          },
-          [_c("i", { staticClass: "zmdi zmdi-edit" })]
-        ),
-        _vm._v(" "),
-        _c(
-          "button",
-          {
-            staticClass: "item",
-            attrs: {
-              "data-toggle": "tooltip",
-              "data-placement": "top",
-              title: "Delete"
-            }
-          },
-          [_c("i", { staticClass: "zmdi zmdi-delete" })]
         )
       ])
     ])
