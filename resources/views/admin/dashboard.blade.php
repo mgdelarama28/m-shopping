@@ -26,6 +26,7 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="col-md-6 col-lg-3">
                         <div class="statistic__item">
                             <h2 class="number">388,688</h2>
@@ -35,6 +36,7 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="col-md-6 col-lg-3">
                         <div class="statistic__item">
                             <h2 class="number">1,086</h2>
@@ -44,6 +46,7 @@
                             </div>
                         </div>
                     </div>
+                    
                     <div class="col-md-6 col-lg-3">
                         <div class="statistic__item">
                             <h2 class="number">$1,060,386</h2>
