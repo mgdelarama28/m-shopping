@@ -26,5 +26,8 @@ class AuthServiceProvider extends ServiceProvider
         $this->registerPolicies();
 
         //
+        Gate::before(function($admin, $ability) {
+            return $admin->hasRole('superadmin') ? true : null;
+        });
     }
 }

@@ -37,6 +37,8 @@ class AdminsTableSeeder extends Seeder
 
             $this->create($data);
         endforeach;
+
+        $this->assignSuperAdmin();
     }
 
     private function init()
@@ -49,5 +51,12 @@ class AdminsTableSeeder extends Seeder
         \DB::beginTransaction();
             Admin::create($data);
         \DB::commit();
+    }
+
+    private function assignSuperAdmin()
+    {
+        $admin = Admin::where('email', 'admin@devadmin.com')->first();
+
+        $admin->assignRole('superadmin');
     }
 }
