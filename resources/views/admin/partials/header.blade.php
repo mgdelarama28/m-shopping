@@ -5,7 +5,7 @@
             <div class="header-wrap2">
                 <div class="logo d-block d-lg-none">
                     <a href="#">
-                        <img src="images/icon/logo-white.png" alt="CoolAdmins" />
+                        <img src="" alt="CoolAdmins" />
                     </a>
                 </div>
 

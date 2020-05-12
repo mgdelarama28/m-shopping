@@ -57,4 +57,18 @@
             </div>
         </div>
     </section>
+
+    <section class="statistic">
+        <div class="section__content section__content--p30">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <data-table
+                            :headings="['#', 'First Name', 'Last Name', 'Email', 'Role', 'Email Verified At']"
+                        ></data-table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 @endsection            
