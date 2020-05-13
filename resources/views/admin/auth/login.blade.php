@@ -6,7 +6,7 @@
             <div class="login-logo">
                 <h1>
                     <a href="#">
-                        Dev Admin
+                        {{ config('app.name') }}
                     </a>
                 </h1>
             </div>
