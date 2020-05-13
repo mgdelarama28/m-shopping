@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('web.index');
-});
+Route::get('/', 'Web\\LandingPageController@index')->name('landing_page');
 
 Auth::routes();
 
