@@ -10,9 +10,9 @@
     <div class="menu-sidebar2__content js-scrollbar1">
         <div class="account2">
             <div class="image img-cir img-120">
-                <img src="{{ $admin->renderAvatar() }}" alt="" />
+                <img src="{{ Auth::guard('admin')->user()->renderAvatar() }}" alt="" />
             </div>
-            <h4 class="name">{{ $admin->renderFullName() }}</h4>
+            <h4 class="name">{{ Auth::guard('admin')->user()->renderFullName() }}</h4>
 
             <a href="{{ route('admin.logout') }}"
                 onclick="event.preventDefault();
@@ -27,7 +27,7 @@
 
         <nav class="navbar-sidebar2">
             <ul class="list-unstyled navbar__list">
-                <li class="active has-sub">
+                <li class="has-sub {{ Route::is('admin.dashboard') ? 'active' : '' }}">
                     <a class="js-arrow" href="#">
                         <i class="fas fa-tachometer-alt"></i>Dashboard
                     </a>
@@ -75,8 +75,8 @@
                     </a>
 
                     <ul class="list-unstyled navbar__sub-list js-sub-list">
-                        <li>
-                            <a href="#">
+                        <li class="{{  Route::is('admin.admins.index') ? 'active' : '' }}">
+                            <a href="{{ route('admin.admins.index') }}">
                                 <i class="fas fa-circle"></i>Admins
                             </a>
                         </li>
