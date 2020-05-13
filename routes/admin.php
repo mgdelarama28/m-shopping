@@ -27,5 +27,9 @@ Route::name('admin.')->prefix('admin')->namespace('Admin')->group(function() {
         });
         
         Route::get('/', 'DashboardController@index')->name('dashboard');
+        Route::get('/admins', 'AdminController@index')->name('admins.index');
+        Route::get('/admins/{id}', 'AdminController@show')->name('admins.show');
+        Route::get('/admins/{id}/edit', 'AdminController@edit')->name('admins.edit');
+        Route::post('/admins/{id}', 'AdminController@update')->name('admins.update');
     });
 });

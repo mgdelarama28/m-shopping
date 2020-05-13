@@ -3,7 +3,7 @@
 @section('breadcrumb')
     <ul class="list-unstyled list-inline au-breadcrumb__list">
         <li class="list-inline-item active">
-            <a href="#">Home</a>
+            <a href="#">Admin</a>
         </li>
         <li class="list-inline-item seprate">
             <span>/</span>

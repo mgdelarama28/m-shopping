@@ -16,11 +16,8 @@
 
             @include('admin.partials.breadcrumb')
 
-            <div id="app">
-                @yield('content')
-            </div>
+            @yield('content')
 
-            @include('admin.partials.footer')
         </div>
     </div>
 
