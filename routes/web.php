@@ -18,3 +18,7 @@ Route::get('/', 'Web\\LandingPageController@index')->name('landing_page');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/product', 'Web\\PageController@product')->name('product');
+Route::get('/cart', 'Web\\PageController@cart')->name('cart');
+Route::get('/category_products', 'Web\\PageController@categoryProducts')->name('category_products');

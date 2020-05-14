@@ -6,6 +6,6 @@
 <script src="{{ asset('js/web/greensock/animation.gsap.min.js') }}"></script>
 <script src="{{ asset('js/web/greensock/ScrollToPlugin.min.js') }}"></script>
 <script src="{{ asset('js/web/OwlCarousel2-2.2.1/owl.carousel.js') }}"></script>
-<script src="{{ asset('js/web/slick-1.8.0/slick.js') }}"></script>
 <script src="{{ asset('js/web/easing/easing.js') }}"></script>
-<script src="{{ asset('js/web/custom.js') }}"></script>
+
+@yield('scripts')

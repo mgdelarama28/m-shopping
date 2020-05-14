@@ -1,33 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<title>OneTech</title>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="description" content="OneTech shop project">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('web.layouts.app')
 
-	@include('web.partials.styles')
-</head>
+@section('styles')
+	<link rel="stylesheet" type="text/css" href="{{ asset('js/web/slick-1.8.0/slick.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('css/web/main_styles.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('css/web/responsive.css') }}">
+@endsection
 
-<body>
-	<div class="super_container">
-		<!-- Header -->
-		<header class="header">
-			<!-- Top Bar -->
-			@include('web.partials.top_bar')
-
-			<!-- Header Main -->
-			@include('web.partials.main_header')
-			
-			<!-- Main Navigation -->
-			@include('web.partials.main_navigation')
-			
-			<!-- Menu -->
-			@include('web.partials.menu')
-
-		</header>
-		
+@section('content')
 		<!-- Banner -->
 		@include('web.partials.banner')
 
@@ -49,7 +28,7 @@
 		<!-- Best Sellers -->
 		@include('web.partials.bestsellers')
 
-		<!-- Adverts -->
+		<!-- Ads -->
 		@include('web.partials.advertisements')
 
 		<!-- Trends -->
@@ -63,17 +42,9 @@
 
 		<!-- Brands -->
 		@include('web.partials.brands')
+@endsection
 
-		<!-- Newsletter -->
-		@include('web.partials.newsletter')
-
-		<!-- Footer -->
-		@include('web.partials.footer')
-
-		<!-- Copyright -->
-		@include('web.partials.copyright')
-	</div>
-
-	@include('web.partials.scripts')
-</body>
-</html>
+@section('scripts')
+	<script src="{{ asset('js/web/slick-1.8.0/slick.js') }}"></script>
+	<script src="{{ asset('js/web/custom.js') }}"></script>
+@endsection

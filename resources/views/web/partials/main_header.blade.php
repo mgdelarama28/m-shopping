@@ -1,11 +1,10 @@
 <div class="header_main">
     <div class="container">
         <div class="row">
-
             <!-- Logo -->
             <div class="col-lg-2 col-sm-3 col-3 order-1">
                 <div class="logo_container">
-                    <div class="logo"><a href="#">OneTech</a></div>
+                    <div class="logo"><a href="{{ route('landing_page') }}">{{ config('app.name') }}</a></div>
                 </div>
             </div>
 
@@ -30,7 +29,10 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <button type="submit" class="header_search_button trans_300" value="Submit"><img src="{{ asset('images/web/search.png') }}" alt=""></button>
+
+                                <button type="submit" class="header_search_button trans_300" value="Submit">
+                                    <img src="{{ asset('images/web/search.png') }}" alt="">
+                                </button>
                             </form>
                         </div>
                     </div>
